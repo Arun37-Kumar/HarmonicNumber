@@ -10,10 +10,22 @@ namespace HarmonicNumber
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the number ");
-            int number = Convert.ToInt32(Console.ReadLine());
-            HarmonicNumber harmonic = new HarmonicNumber();
-            harmonic.PrintHarmonicNumber(number);
+            try
+            {
+
+                Console.WriteLine("Enter the number ");
+                int number = Convert.ToInt32(Console.ReadLine());
+                if (number <= 0)
+                {
+                    Console.WriteLine("Entered Wrong Value!");
+                }
+                HarmonicNumber harmonic = new HarmonicNumber();
+                harmonic.PrintHarmonicNumber(number);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
             Console.ReadLine();
 
         }
